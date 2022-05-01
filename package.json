@@ -9,8 +9,11 @@
     "hardhat": "^2.9.3"
   },
   "dependencies": {
+    "@chainlink/contracts": "^0.4.0",
     "@openzeppelin/contracts": "^4.6.0",
     "dotenv": "^16.0.0",
-    "hardhat-tracer": "^1.1.0-rc.3"
+    "hardhat-tracer": "^1.1.0-rc.3",
+    "merkle-tools": "^1.4.1",
+    "merkletreejs": "^0.2.31"
   }
 }
