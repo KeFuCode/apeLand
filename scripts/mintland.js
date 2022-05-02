@@ -17,8 +17,7 @@ async function main() {
 
     const token = new hre.ethers.Contract(tokenAddr, token_abi, provider);
 
-    console.log(user.address);
-    
+    // console.log(user.address);
     // console.log(await provider.getCode(tokenAddr));
 
     console.log(`token balance before: ${await token.balanceOf(user.address)}`);
@@ -29,16 +28,14 @@ async function main() {
 
     await token.connect(user).approve("0x7A6E4A0a64553E4452C3680978DC2D681eFC3308", hre.ethers.BigNumber.from("2000000000000000000000"));
 
-    let tx = await land.connect(user).estimateGas.mintLands(
+    let tx = await land.connect(user).mintLands(
         1,
         [
             "0xf91e5cebd8c4bdc2e070944e71c958064b425aafa453746d902e29eb08a5bf3a",
             "0x05277b8886d68710b3d192cf512a96918734b2afbffec7ee26e992c49414a540"
-        ],
-        {
-            gasLimit: 300000
-        }
+        ]
     );
+    console.log('tx: ', tx);
 
     console.log(`land balance after: ${await land.balanceOf(user.address)}`);
 

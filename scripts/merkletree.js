@@ -17,7 +17,7 @@ const tree = new MerkleTree(leaves, keccak256, { sortPairs: true });
 const root = tree.getHexRoot();
 console.log('root: ', root);
 // 0xEd2A421e01f349583D9aE0f394B9D03275ECDB11 对应的 keccak256 加密
-const leaf = keccak256('0xEd2A421e01f349583D9aE0f394B9D03275ECDB11');
+const leaf = keccak256('0x10a6D5234d5d026df132C31239F462Be82589EA8');
 console.log('leaf: ', leaf);
 // merkle proof
 // const proof = tree.getProof(leaf);
